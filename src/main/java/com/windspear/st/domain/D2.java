@@ -11,6 +11,6 @@ import org.springframework.stereotype.Component;
 @Data
 public class D2 {
 
-    @Value("${name}")
+    @Value("${d2.name}")
     private String name;
 }

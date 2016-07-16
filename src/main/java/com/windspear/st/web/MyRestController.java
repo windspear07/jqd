@@ -1,5 +1,6 @@
 package com.windspear.st.web;
 
+import com.windspear.st.common.Settings;
 import com.windspear.st.domain.D2;
 import com.windspear.st.domain.User;
 import lombok.extern.slf4j.Slf4j;
@@ -19,9 +20,13 @@ public class MyRestController {
     @Autowired
     private D2 d2;
 
+    @Autowired
+    Settings settings;
+
     @RequestMapping("/")
     public String itest(){
-        log.info("it my first test. where is the config ? {}" , d2.getName());
+        log.info("settings is , {}", settings);
+        log.info("it my first test. where is the common : {}" , d2.getName());
         return "hello ----. its works right..!!!!";
     }
 
